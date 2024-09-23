@@ -7,12 +7,9 @@ describe("Testa a página de detalhes do pokemon", () => {
     });
 
     cy.contains("Pikachu");
-    cy.get("img").should(
-      "have.attr",
-      "src",
-      "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
-    );
+    cy.get("img").should("have.attr", "src", "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png");
 
+    // Teste unitário dentro do teste de end to end
     cy.get("div")
       .find("div")
       .should(($div) => {

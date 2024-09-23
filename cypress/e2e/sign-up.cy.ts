@@ -9,9 +9,7 @@ describe("Testa a página de Sign Up", () => {
   it("O botão deve ter 10px de margin top", () => {
     cy.visit("/sign-up");
 
-    cy.get("div")
-      .find("button")
-      .should("have.css", "marginTop")
-      .and("match", /10px/);
+    //Teste unitário dentro do teste end-to-end
+    cy.get("div").find("button").should("have.css", "marginTop").and("match", /10px/);
   });
 });

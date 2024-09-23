@@ -20,7 +20,7 @@ describe("Testa a página de login", () => {
     //   });
   });
 
-  it("Quando clicar em login deve ir para a página de Dashboard e ter um pokemon Pikaxu", () => {
+  it("Quando clicar em login deve ir para a página de Dashboard e ter um pokemon Pikachu", () => {
     cy.visit("/");
 
     cy.intercept("GET", "http://localhost:3000/pokemon", {
@@ -39,12 +39,10 @@ describe("Testa a página de login", () => {
     cy.contains("Cadastre-se");
   });
 
+  //Teste unitário para exemplo
   it("O botão deve ter 10px de margin top", () => {
     cy.visit("/sign-up");
 
-    cy.get("div")
-      .find("button")
-      .should("have.css", "marginTop")
-      .and("match", /10px/);
+    cy.get("div").find("button").should("have.css", "marginTop").and("match", /10px/);
   });
 });
